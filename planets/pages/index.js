@@ -1,6 +1,5 @@
 import Head from "next/head";
-
-// import clientPromise from '../lib/mongodb'
+import Link from "next/link";
 import { useState, useEffect } from "react";
 export default function Home() {
   const [PlanetInfo, setPlanetInfo] = useState({});
@@ -124,6 +123,10 @@ export default function Home() {
                 <b>Length Of Day:</b>
                 {e.LengthOfDay}
               </p>
+              <Link href={"/" + e._id}>
+                <button>Go to Details</button>
+              </Link>
+
               <button
                 onClick={() => {
                   deletePlanet(e._id);
