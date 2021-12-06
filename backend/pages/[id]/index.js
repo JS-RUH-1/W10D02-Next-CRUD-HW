@@ -53,6 +53,10 @@ const Plant = ({ plant }) => {
                 onConfirm={handleDelete}
             />
         </div>
+
+
+
+
     )
 }
 
