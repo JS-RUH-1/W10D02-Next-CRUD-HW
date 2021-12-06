@@ -35,7 +35,7 @@ export default function Home({planets}) {
   </thead>
 
   <tbody>
-    {planets.map(planet =>     <tr>
+    {planets.map(planet =>     <tr key={planet._id}>
   <td><Link href={`/planets/${planet._id}`}><a href="#">{planet.name}</a></Link></td>
   <td>{planet.LengthOfDay}</td>
   <td>{planet.NumberOfMoon}</td>
@@ -47,29 +47,29 @@ export default function Home({planets}) {
 </table>
 
 <h1 className="is-size-4">Add new planet</h1>
-<div class="field">
-  <label class="label">Name</label>
-  <div class="control">
-    <input class="input" type="text"  value={toAdd.name} onChange={(e) => add({...toAdd, name: e.target.value})}  placeholder="e.g Earth"/>
+<div className="field">
+  <label className="label">Name</label>
+  <div className="control">
+    <input className="input" type="text"  value={toAdd.name} onChange={(e) => add({...toAdd, name: e.target.value})}  placeholder="e.g Earth"/>
   </div>
 </div>
 
-<div class="field">
-  <label class="label">Length of day</label>
-  <div class="control">
-    <input class="input" type="number"  value={toAdd.LengthOfDay} onChange={(e) => add({...toAdd, LengthOfDay: e.target.value})}  placeholder="Length of days"/>
+<div className="field">
+  <label className="label">Length of day</label>
+  <div className="control">
+    <input className="input" type="number"  value={toAdd.LengthOfDay} onChange={(e) => add({...toAdd, LengthOfDay: e.target.value})}  placeholder="Length of days"/>
   </div>
 </div>
 
-<div class="field">
-  <label class="label">Moons</label>
-  <div class="control">
-    <input class="input" value={toAdd.NumberOfMoon} onChange={(e) => add({...toAdd, NumberOfMoon: e.target.value})} type="number" placeholder="Number of moons"/>
+<div className="field">
+  <label className="label">Moons</label>
+  <div className="control">
+    <input className="input" value={toAdd.NumberOfMoon} onChange={(e) => add({...toAdd, NumberOfMoon: e.target.value})} type="number" placeholder="Number of moons"/>
   </div>
 </div>
 
-<div class="control">
-  <button class="button is-primary" onClick={() => submit()}>Submit</button>
+<div className="control">
+  <button className="button is-primary" onClick={() => submit()}>Submit</button>
 </div>
 
 
