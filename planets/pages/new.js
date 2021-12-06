@@ -40,7 +40,8 @@ const newPlanet = () => {
             hundleAdd(e);
           }}
         >
-          <label>PlanetName</label>
+          <label>Planet Name</label>
+          <br />
           <input
             onChange={(e) => {
               newPlanet.PlanetName = e.target.value;
@@ -49,7 +50,11 @@ const newPlanet = () => {
             id="name"
             type="text"
           />
-          <label>NumberOfMoon</label>
+          <br />
+
+          <label>Number Of Moon</label>
+          <br />
+
           <input
             onChange={(e) => {
               newPlanet.NumberOfMoon = e.target.value;
@@ -58,14 +63,18 @@ const newPlanet = () => {
             id="moons"
             type="number"
           />
-          <label>LengthOfDay</label>
+          <br />
+
+          <label>Length Of Day</label>
+          <br />
+
           <input
             onChange={(e) => {
               newPlanet.LengthOfDay = e.target.value;
               setnewPlanet({ ...newPlanet });
             }}
             id="day"
-            type="number"
+            type="text"
           />
           <br />
           <button type="submit">Add</button>
