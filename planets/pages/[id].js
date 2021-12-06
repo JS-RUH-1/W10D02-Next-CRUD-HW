@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import Router from "next/router";
 function Details() {
   const id = Router.query.id;
@@ -17,6 +18,10 @@ function Details() {
   }, []);
   return (
     <div>
+      <Head>
+        <title>Planets Details</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <p>
         <b>Planet Name:</b>
         {Data.PlanetName}
