@@ -1,0 +1,31 @@
+/* h1{
+    text-align: center;
+}
+
+.wrapper{
+    max-width:1200px;
+    padding:0 16px;
+    margin: auto;
+}
+
+.navbar{
+    padding:20px;
+    margin-bottom: 20px;
+    background:brown;
+    color: bisque;
+    display: flex;
+    justify-content:space-between;
+}
+.navbar .create{
+    color: bisque;
+    font-size: 1.5rem;
+}
+
+.navbar .navbar-brand{
+    color:antiquewhite;
+    font-size: 2rem;
+}
+
+.navbar-brand:hover, .create:hover{
+    color: #fff;
+} */
