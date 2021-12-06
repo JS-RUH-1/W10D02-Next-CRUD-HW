@@ -21,6 +21,13 @@ export default function Home({planets}) {
       router.push("/");
       add({});
     })
+  };
+  const deletePlanet = (id) => {
+    fetch(`http://localhost:3000/api/planets/${id}`,{method: 'DELETE'})
+    .then(res => res.json())
+    .then(data => {
+      router.push("/");
+    })
   }
   return <div className="container">
     <h1 className="is-size-3">Planets</h1>
@@ -39,6 +46,7 @@ export default function Home({planets}) {
   <td><Link href={`/planets/${planet._id}`}><a href="#">{planet.name}</a></Link></td>
   <td>{planet.LengthOfDay}</td>
   <td>{planet.NumberOfMoon}</td>
+  <td><a href="#" onClick={() => deletePlanet(planet._id)}>Delete</a></td>
 
    </tr>)}
 

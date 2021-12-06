@@ -5,5 +5,7 @@ export default async function handler(req, res) {
          return res.status(200).json((await planet.findOne({_id: req.query.id})))
     if (req.method === 'PUT') 
          return res.status(200).json((await planet.updateOne({_id: req.query.id},{$set: req.body})))
+     if (req.method === 'DELETE') 
+     return res.status(200).json((await planet.deleteOne({_id: req.query.id})))
 
 }
