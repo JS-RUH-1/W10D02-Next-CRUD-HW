@@ -16,6 +16,7 @@ export const getStaticProps = async ()=> {
 export default function Homepage({data}){
 
     const [response, setREs]= useState(data)
+    const [id, setID]= useState(data)
     const [PlanetName, setPlanetName]= useState()
     const [NumberOfMoon, setNumberOfMoon]= useState()
     const [LengOfDay, setLengOfDay]= useState()
@@ -37,6 +38,13 @@ export default function Homepage({data}){
         })
         
     }
+    function ubdate (id){
+        axios.put(`http://localhost:3000/api/${id}`,{PlanetName:PlanetName , NumberOfMoon:NumberOfMoon,LengOfDay:LengOfDay})
+        .then((res)=>{
+            console.log(res)
+             setREs(res.data.data)
+    })
+}
 
 return (
 <div className="flex">
@@ -46,6 +54,7 @@ return (
         <h2>{planet.NumberOfMoon}</h2>
         <h2>{planet.LengOfDay}</h2>
         <button onClick={(e)=>{DeleteByID(e,planet._id)}} >Delete</button>
+        <button onClick={()=>ubdate(planet._id)} >Update</button>
         </div>
     })}
 
@@ -54,6 +63,7 @@ return (
 <input placeholder="Number Of Moon" type="number" name="number"  onChange={(e)=>{setNumberOfMoon(e.target.value)}} /><br></br>
 <input placeholder="Length Of Day" type="number" name="number"  onChange={(e)=>{setLengOfDay(e.target.value)}} /><br></br>
 <button onClick={(e)=>{AddPlanet(e)}} type="submit" value="Submit">ADD PLANET</button><br></br>
+
 </form>
 
 </div>

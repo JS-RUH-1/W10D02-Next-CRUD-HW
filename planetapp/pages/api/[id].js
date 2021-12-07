@@ -34,7 +34,9 @@ export default async (req , res )=>{
                     if (!planet){
                         res.status(400).json({ success: false});
                        }
-                    res.status(200).json({success:true , data: planet})
+                    
+                    const planets=await Planet.find({})
+                    res.status(200).json({success:true , data: planets})
                 }catch (error){
                     res.status(400).json({ success: false});
                 }
