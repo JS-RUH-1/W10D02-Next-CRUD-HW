@@ -1,0 +1,109 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgb(23, 53, 53);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  margin-right: 20px;
+  color: #fff;
+}
+
+.albumsContainer, .singleInfo, .not-found {
+  background-color: rgb(160, 210, 210);
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.albums {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.ele {
+  width: 30%;
+  height: 10vh;
+  margin: 20px 10px;
+  -webkit-box-shadow: 0px 0px 15px -12px #000000; 
+  box-shadow: 0px 0px 15px -12px #000000;
+  border-radius: 7px 7px 0px 0px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  margin-top: 20px;
+  height: 30vh;
+  background-color: rgb(3, 96, 96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+span {
+  color: #000;
+  cursor: pointer;
+}
+
+.addBTN {
+  margin: 20px;
+  padding: 10px;
+  border: none;
+  background-color: rgb(18, 33, 82);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.addPage {
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.addPage input {
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+  width: 30%;
+  border-radius: 10px;
+}
+
+.viewBTN, .delete{
+  margin-left: 10px;
+  padding: 10px;
+  color: #fff;
+  background-color: rgb(36, 36, 167);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.delete {
+  background-color: rgb(179, 37, 52);
+}
