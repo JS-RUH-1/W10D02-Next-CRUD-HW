@@ -1,0 +1,29 @@
+html,
+body {
+   padding: 60px; 
+  margin: 30px; 
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* background-image: url("https://img.freepik.com/free-photo/galaxy-nature-aesthetic-background-starry-sky-mountain-remixed-media_53876-128640.jpg?size=626&ext=jpg");
+    background-repeat: no-repeat; */
+    /* background-color: rgba(7, 7, 7, 0.685); */
+    background-color: black;
+    text-align: center;
+}
+
+h1, h3, h4{
+  color: azure;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  justify-content: center;
+}
