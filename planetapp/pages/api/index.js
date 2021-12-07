@@ -1,5 +1,5 @@
 
-import dbConnect from "../../../utils/dbConnect"
+import dbConnect from "../../utils/dbConnect"
 import Planet from '../../models/Planet'
 
 dbConnect();
@@ -19,7 +19,9 @@ export default async (req , res )=>{
       break;
       case "POST":
       try{
-        const planets = await Planet.create(req.body)
+        const planet = await Planet.create(req.body)
+        const planets = await Planet.find({});
+
         res.status(201).json({success:true , data: planets})
 
       }catch (error){

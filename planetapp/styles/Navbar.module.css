@@ -1,0 +1,36 @@
+/* h1 {
+    text-align: center;
+} */
+
+.wrapper{
+    max-width: 1200px;
+    padding: 0 16px;
+    margin: auto;
+}
+
+.navbar{
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(131, 131, 190);
+    display: grid;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .Create{
+    color: cadetblue;
+    font-size: 1.5rem;
+
+
+}
+
+.navbar .navbar-a{
+    color: cadetblue;
+    font-size: 2rem;
+
+}
+
+.navbar a:hover, .Create:hover{
+    color: cadetblue;
+
+}

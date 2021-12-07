@@ -1,6 +1,6 @@
 const mongoose =require("mongoose")
 
-const NoteSchema = new mongoose.Schema({
+const PlanetSchema = new mongoose.Schema({
     PlanetName:{
         type: String,
         required: [true, "please add Planet"], 
@@ -16,4 +16,4 @@ const NoteSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.models.Planet || mongoose.model("Planet", NoteSchema);
+module.exports = mongoose.models.Planet || mongoose.model("Planet", PlanetSchema);
